@@ -1,0 +1,54 @@
+@use '@angular/material' as mat;
+
+$primary-color: #00bcd4;
+$secondary-color: #0288d1;
+
+html {
+  @include mat.theme(
+    (
+      color: (
+        primary: (
+          500: #00bcd4,
+          600: #00acc1,
+          700: #0097a7,
+        ),
+        tertiary: (
+          500: #03a9f4,
+          600: #039be5,
+          700: #0288d1,
+        ),
+      ),
+      typography: Roboto,
+      density: 0,
+    )
+  );
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  color-scheme: dark;
+
+  background-image: url('/assets/bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  color: #ffffff;
+  font: var(--mat-sys-body-medium);
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  display: inline-block;
+}
+body {
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+}

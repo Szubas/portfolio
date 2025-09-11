@@ -1,0 +1,33 @@
+@use '../../styles.scss' as *;
+
+.nav {
+  width: 100%;
+  margin: 0;
+  border-bottom: 1px solid black;
+  background-color: rgba(0, 0, 0, 0.1);
+  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__items {
+    height: 10vh;
+    width: 50vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    &__item {
+      font-size: 20px;
+      color: $secondary-color;
+      cursor: pointer;
+      text-decoration: none;
+
+      &:hover,
+      &.active { 
+        color: $primary-color;
+      }
+    }
+  }
+}
