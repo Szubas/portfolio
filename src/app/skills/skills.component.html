@@ -1,0 +1,11 @@
+<div class="skills">
+  <h1>Moje umiejętności</h1>
+  <div class="skills__grid">
+    <div class="skills__grid__card" *ngFor="let skill of skills">
+      <ng-icon [name]="skill.name" class="skills__grid__card__icon"></ng-icon>
+      <div class="skills__grid__card__progress">
+        <div class="skills__grid__card__progress__fill" [style.width.%]="skill.progress"></div>
+      </div>
+    </div>
+  </div>
+</div>
