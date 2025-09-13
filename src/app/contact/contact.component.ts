@@ -29,21 +29,14 @@ export class ContactComponent {
   constructor(private http: HttpClient) {}
 
   onSubmit(form: NgForm) {
-    if (
-      form.controls['message'].value === '' ||
-      form.controls['email'].value === '' ||
-      form.controls['name'].value === '' ||
-      !form.controls['email'].valid
-    ) {
-      alert('Formularz zawiera błędy. Uzupełnij wszystkie pola wymagane i popraw email.');
+    if (form.invalid) {
+      alert('Formularz zawiera błędy.');
       return;
     }
 
     const url = 'https://formspree.io/f/YOUR_FORM_ID';
     this.http.post(url, form.value).subscribe({
-      next: () => {
-        alert('Wiadomość wysłana!');
-      },
+      next: () => alert('Wiadomość wysłana!'),
       error: () => alert('Błąd wysyłki'),
     });
   }

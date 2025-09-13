@@ -31,9 +31,12 @@
     <span>* - Pola wymagane</span>
   </form>
 
-  <div class="contact__link" *ngFor="let link of links()">
-    <ng-icon [name]="link.name" class="contact__link__icon"></ng-icon>
-    <a [href]="link.url" class="contact__link__url" *ngIf="link.name !== 'svglGmail'">{{ link.url }}</a>
-    <span class="contact__link__url contact__link__url__mail" *ngIf="link.name === 'svglGmail'">{{ link.url }}</span>
+  <div class="contact__links">
+    <div class="contact__links__link" *ngFor="let link of links()">
+    <ng-icon [name]="link.name" class="contact__links__link__icon contact__links__link__icon__mail" *ngIf="link.name === 'svglGmail'"></ng-icon>
+    <a [href]="link.url" class="contact__links__link__url" *ngIf="link.name !== 'svglGmail'">{{ link.url }}</a>
+    <span class="contact__links__link__url contact__links__link__url__mail" *ngIf="link.name === 'svglGmail'">{{ link.url }}</span>
+    <a [href]="link.url" class="contact__links__link__mobile" *ngIf="link.name !== 'svglGmail'"><ng-icon [name]="link.name" class="contact__links__link__mobile__icon"></ng-icon></a>
+  </div>
   </div>
 </div>

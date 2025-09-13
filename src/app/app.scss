@@ -7,3 +7,20 @@
     height: 100%;
   }
 }
+
+.mobile {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .app {
+    display: none;
+  }
+
+  .mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}

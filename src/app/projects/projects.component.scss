@@ -76,3 +76,27 @@
     }
   }
 }
+
+
+@media screen and (max-width: 768px) {
+  .projects {
+    &__grid {
+      grid-template-columns: 1fr;
+    }
+
+    &__card {
+      width: 100%;
+      height: auto;
+
+      &:hover {
+        transform: none;
+        background-color: rgba(0, 0, 0, 0.2);
+      }
+
+      &__link {
+        margin-bottom: 10px;
+      }
+    }
+  }
+  
+}
