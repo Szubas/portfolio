@@ -3,12 +3,9 @@
   <h2>Napisz do mnie</h2>
 
   <form class="contact__form" (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
-
     <label for="firstName">*Imię:</label>
     <input type="text" id="firstName" name="firstName" ngModel required #firstName="ngModel" />
-    <div class="error" *ngIf="firstName.invalid && firstName.touched">
-      Imię jest wymagane.
-    </div>
+    <div class="error" *ngIf="firstName.invalid && firstName.touched">Imię jest wymagane.</div>
 
     <label for="lastName">Nazwisko:</label>
     <input type="text" id="lastName" name="lastName" ngModel />
@@ -22,9 +19,7 @@
 
     <label for="message">*Wiadomość:</label>
     <textarea id="message" name="message" rows="5" ngModel required #message="ngModel"></textarea>
-    <div class="error" *ngIf="message.invalid && message.touched">
-      Wiadomość jest wymagana.
-    </div>
+    <div class="error" *ngIf="message.invalid && message.touched">Wiadomość jest wymagana.</div>
 
     <button type="submit">Wyślij</button>
 
@@ -33,10 +28,33 @@
 
   <div class="contact__links">
     <div class="contact__links__link" *ngFor="let link of links()">
-    <ng-icon [name]="link.name" class="contact__links__link__icon contact__links__link__icon__mail" *ngIf="link.name === 'svglGmail'"></ng-icon>
-    <a [href]="link.url" class="contact__links__link__url" *ngIf="link.name !== 'svglGmail'">{{ link.url }}</a>
-    <span class="contact__links__link__url contact__links__link__url__mail" *ngIf="link.name === 'svglGmail'">{{ link.url }}</span>
-    <a [href]="link.url" class="contact__links__link__mobile" *ngIf="link.name !== 'svglGmail'"><ng-icon [name]="link.name" class="contact__links__link__mobile__icon"></ng-icon></a>
-  </div>
+      <!-- <ng-icon
+        [name]="link.name"
+        class="contact__links__link__icon contact__links__link__icon__mail"
+      ></ng-icon> -->
+      <!-- <a [href]="link.url" class="contact__links__link__url" *ngIf="link.name !== 'svglGmail'">{{
+        link.url
+      }}</a> -->
+      <a
+        [href]="link.url"
+        *ngIf="link.name !== 'svglGmail'"
+      >
+        <ng-icon
+          [name]="link.name"
+        class="contact__links__link__icon contact__links__link__icon__mail"
+        ></ng-icon>
+      </a>
+      <ng-icon
+        [name]="link.name"
+        class="contact__links__link__icon contact__links__link__icon__mail"
+        *ngIf="link.name === 'svglGmail'"
+      ></ng-icon>
+      <span
+        class="contact__links__link__url contact__links__link__url__mail"
+        *ngIf="link.name === 'svglGmail'"
+      >
+        {{ link.url }}</span
+      >
+    </div>
   </div>
 </div>

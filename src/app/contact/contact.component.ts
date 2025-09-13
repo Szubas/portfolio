@@ -34,7 +34,7 @@ export class ContactComponent {
       return;
     }
 
-    const url = 'https://formspree.io/f/YOUR_FORM_ID';
+    const url = 'https://formspree.io/f/CODE';
     this.http.post(url, form.value).subscribe({
       next: () => alert('Wiadomość wysłana!'),
       error: () => alert('Błąd wysyłki'),
