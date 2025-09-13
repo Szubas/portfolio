@@ -1,3 +1,5 @@
+@use '../../styles.scss' as *;
+
 .skills {
   width: 100%;
   max-width: 1200px;
@@ -8,10 +10,11 @@
   justify-content: center;
   flex-direction: column;
   padding: 2rem 1rem;
+  color: $primary-color;
 
   &__grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr); 
+    grid-template-columns: repeat(5, 1fr);
     gap: 50px;
 
     // display: flex;
@@ -29,23 +32,30 @@
       justify-content: center;
       align-items: center;
       flex-direction: column;
+      transition: 0.5s;
+
+      &:hover {
+        transform: scale(1.5);
+      transition: 0.5s;
+      }
 
       &__icon {
         width: 30px;
         height: 30px;
         margin: 10px;
+        color: white;
       }
 
       &__progress {
         width: 50%;
         height: 20px;
-        background-color: rgba(0, 0, 0, 0.4); 
+        background-color: rgba(0, 0, 0, 0.4);
         border-radius: 10px;
         overflow: hidden;
 
         &__fill {
           height: 100%;
-          background-color: green; 
+          background-color: green;
           width: 0%;
           transition: width 0.3s ease;
         }

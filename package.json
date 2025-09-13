@@ -22,6 +22,7 @@
   },
   "private": true,
   "dependencies": {
+    "@angular/animations": "^20.3.0",
     "@angular/cdk": "^20.2.2",
     "@angular/common": "^20.3.0",
     "@angular/compiler": "^20.3.0",
@@ -33,6 +34,7 @@
     "@ng-icons/core": "^32.1.0",
     "@ng-icons/devicon": "^32.1.0",
     "@ng-icons/material-file-icons": "^32.1.0",
+    "@ng-icons/simple-icons": "^32.1.0",
     "@ng-icons/svgl": "^32.1.0",
     "devicon": "^2.17.0",
     "portfolio": "file:",

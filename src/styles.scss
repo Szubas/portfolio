@@ -30,25 +30,22 @@ html {
   box-sizing: border-box;
 }
 
-body {
-  color-scheme: dark;
-
-  background-image: url('/assets/bg.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  color: #ffffff;
-  font: var(--mat-sys-body-medium);
-  margin: 0;
-}
-
 html,
 body {
   height: 100%;
   width: 100%;
-  display: inline-block;
-}
-body {
+  margin: 0;
   font-family: Roboto, 'Helvetica Neue', sans-serif;
+  color: #ffffff;
+  font: var(--mat-sys-body-medium);
+  color-scheme: dark;
+}
+
+body {
+  background-image: url('/assets/bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  min-height: 100vh;
 }

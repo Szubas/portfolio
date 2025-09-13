@@ -24,7 +24,8 @@ import {
   matfPhpColored,
   matfReactTsColored,
 } from '@ng-icons/material-file-icons/colored';
-import { Skill } from './skills.interface';
+import { simpleDotnet } from '@ng-icons/simple-icons';
+import { Skill } from './skill.interface';
 
 @Component({
   selector: 'app-skills',
@@ -53,6 +54,7 @@ import { Skill } from './skills.interface';
       matfGitColored,
       matfPhpColored,
       matfReactTsColored,
+      simpleDotnet
     }),
   ],
 })
@@ -61,6 +63,7 @@ export class SkillsComponent {
     { name: 'svglC', progress: 20 },
     { name: 'svglCPlusplus', progress: 20 },
     { name: 'svglCsharp', progress: 60 },
+    { name: 'simpleDotnet', progress: 60 },
     { name: 'matfKubernetesColored', progress: 20 },
     { name: 'svglAngular', progress: 60 },
     { name: 'matfDatabaseColored', progress: 70 },

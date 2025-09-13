@@ -1,0 +1,12 @@
+<div class="projects">
+  <h2 class="projects__title">Moje projekty</h2>
+  <div class="projects__grid">
+    <div class="projects__card" *ngFor="let project of Projects">
+      <h3 class="projects__card__title">{{ project.name }}</h3>
+      <ng-icon [name]="project.icon" class="projects__card__icon"></ng-icon>
+      <p class="projects__card__description">{{ project.description }}</p>
+      <a [href]="project.link" class="projects__card__link"><ng-icon name="svglGithubDark" class="projects__card__icon"></ng-icon></a>
+        <p class="projects__card__tech">Technologie: {{ project.tech }}</p>
+    </div>
+  </div>
+</div>
