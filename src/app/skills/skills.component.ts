@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NgIcon, provideIcons } from '@ng-icons/core';
 import {
@@ -59,7 +59,7 @@ import { Skill } from './skill.interface';
   ],
 })
 export class SkillsComponent {
-  skills: Skill[] = [
+  skills = signal<Skill[]>([
     { name: 'svglC', progress: 20 },
     { name: 'svglCPlusplus', progress: 20 },
     { name: 'svglCsharp', progress: 60 },
@@ -80,5 +80,5 @@ export class SkillsComponent {
     { name: 'svglDocker', progress: 30 },
     { name: 'svglFastapi', progress: 80 },
     { name: 'svglLinux', progress: 40 },
-  ];
+  ]);
 }

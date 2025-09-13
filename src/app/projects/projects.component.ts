@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { NgIcon, provideIcons } from '@ng-icons/core';
 import { svglAngular, svglCsharp, svglPython, svglGithubDark, svglFastapi } from '@ng-icons/svgl';
 import { matfReactTsColored } from '@ng-icons/material-file-icons/colored';
@@ -24,7 +24,7 @@ import { Project } from './project.interface';
   ],
 })
 export class ProjectsComponent {
-  Projects: Project[] = [
+  Projects = signal<Project[]>([
     {
       name: 'Angular shop',
       description:
@@ -101,5 +101,5 @@ export class ProjectsComponent {
       tech: 'Python, Selenium, Docker',
       icon: 'svglPython'
     },
-  ];
+  ]);
 }

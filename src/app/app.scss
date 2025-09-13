@@ -1,10 +1,9 @@
 .app {
   display: flex;
   flex-direction: column;
-}
 
-main {
-  position: relative;  
-  min-height: 100vh;
-  overflow: hidden;
+  &__content {
+    position: relative;
+    height: 100%;
+  }
 }

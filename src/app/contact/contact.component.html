@@ -1,0 +1,39 @@
+<div class="contact">
+  <h1 class="contact__title">Kontakt</h1>
+  <h2>Napisz do mnie</h2>
+
+  <form class="contact__form" (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+
+    <label for="firstName">*Imię:</label>
+    <input type="text" id="firstName" name="firstName" ngModel required #firstName="ngModel" />
+    <div class="error" *ngIf="firstName.invalid && firstName.touched">
+      Imię jest wymagane.
+    </div>
+
+    <label for="lastName">Nazwisko:</label>
+    <input type="text" id="lastName" name="lastName" ngModel />
+
+    <label for="email">*Email:</label>
+    <input type="email" id="email" name="email" ngModel required email #email="ngModel" />
+    <div class="error" *ngIf="email.invalid && email.touched">
+      <span *ngIf="email.errors?.['required']">Email jest wymagany.</span>
+      <span *ngIf="email.errors?.['email']">Wprowadź poprawny adres email.</span>
+    </div>
+
+    <label for="message">*Wiadomość:</label>
+    <textarea id="message" name="message" rows="5" ngModel required #message="ngModel"></textarea>
+    <div class="error" *ngIf="message.invalid && message.touched">
+      Wiadomość jest wymagana.
+    </div>
+
+    <button type="submit">Wyślij</button>
+
+    <span>* - Pola wymagane</span>
+  </form>
+
+  <div class="contact__link" *ngFor="let link of links()">
+    <ng-icon [name]="link.name" class="contact__link__icon"></ng-icon>
+    <a [href]="link.url" class="contact__link__url" *ngIf="link.name !== 'svglGmail'">{{ link.url }}</a>
+    <span class="contact__link__url contact__link__url__mail" *ngIf="link.name === 'svglGmail'">{{ link.url }}</span>
+  </div>
+</div>
