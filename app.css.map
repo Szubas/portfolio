@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/app.scss"],
+  "sourcesContent": [".app {\r\n  display: flex;\r\n  flex-direction: column;\r\n\r\n  &__content {\r\n    position: relative;\r\n    height: 100%;\r\n  }\r\n}\r\n"],
+  "mappings": ";AAAA,CAAA;AACE,WAAA;AACA,kBAAA;;AAEA,CAAA;AACE,YAAA;AACA,UAAA;;",
+  "names": []
+}
